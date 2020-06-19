@@ -41,15 +41,21 @@ export class DingBot {
   }
 
   async send(msg: Msg) {
+    const data = await this.rawSend(msg)
+
+    if (data.errcode !== 0) {
+      throw new Error(data.errmsg)
+    }
+  }
+
+  async rawSend(msg: Msg) {
     const { data } = await axios.request<Resp>({
       method: 'post',
       url: this.buildUrl(),
       data: msg,
     })
 
-    if (data.errcode !== 0) {
-      throw new Error(data.errmsg)
-    }
+    return data
   }
 
   private buildUrl() {
