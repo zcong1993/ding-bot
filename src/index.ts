@@ -48,11 +48,14 @@ export class DingBot {
     }
   }
 
-  async rawSend(msg: Msg) {
+  async rawSend(msg: Msg | string) {
     const { data } = await axios.request<Resp>({
       method: 'post',
       url: this.buildUrl(),
       data: msg,
+      headers: {
+        'content-type': 'application/json',
+      },
     })
 
     return data
