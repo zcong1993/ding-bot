@@ -91,3 +91,5 @@ export interface FeedCardMsg extends BaseMsgWithoutAt {
 }
 
 export type Msg = TextMsg | LinkMsg | MarkdownMsg | ActionCardMsg | FeedCardMsg
+
+export type OmitMsgType<T extends Msg> = Omit<T, 'msgtype'>

@@ -9,6 +9,7 @@ import {
   MarkdownMsg,
   ActionCardMsg,
   FeedCardMsg,
+  OmitMsgType,
 } from './types'
 
 const endpoint = 'https://oapi.dingtalk.com/robot/send'
@@ -20,24 +21,39 @@ export class DingBot {
     }
   }
 
-  async sendTextMsg(msg: TextMsg) {
-    return this.send(msg)
+  async sendTextMsg(msg: OmitMsgType<TextMsg>) {
+    return this.send({
+      msgtype: 'text',
+      ...msg,
+    })
   }
 
-  async sendLinkMsg(msg: LinkMsg) {
-    return this.send(msg)
+  async sendLinkMsg(msg: OmitMsgType<LinkMsg>) {
+    return this.send({
+      msgtype: 'link',
+      ...msg,
+    })
   }
 
-  async sendMarkdownMsg(msg: MarkdownMsg) {
-    return this.send(msg)
+  async sendMarkdownMsg(msg: OmitMsgType<MarkdownMsg>) {
+    return this.send({
+      msgtype: 'markdown',
+      ...msg,
+    })
   }
 
-  async sendActionCardMsg(msg: ActionCardMsg) {
-    return this.send(msg)
+  async sendActionCardMsg(msg: OmitMsgType<ActionCardMsg>) {
+    return this.send({
+      msgtype: 'actionCard',
+      ...msg,
+    })
   }
 
-  async sendFeedCardMsg(msg: FeedCardMsg) {
-    return this.send(msg)
+  async sendFeedCardMsg(msg: OmitMsgType<FeedCardMsg>) {
+    return this.send({
+      msgtype: 'feedCard',
+      ...msg,
+    })
   }
 
   async send(msg: Msg) {
