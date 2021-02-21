@@ -6,7 +6,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 4.0.0_ccdb19122295d95dd33d8f3504881f3d
   '@typescript-eslint/parser': 4.0.0_eslint@7.2.0+typescript@4.0.2
   eslint: 7.2.0
-  eslint-config-prettier: 7.0.0_eslint@7.2.0
+  eslint-config-prettier: 8.0.0_eslint@7.2.0
   eslint-plugin-import: 2.21.2_eslint@7.2.0
   husky: 5.0.9
   jest: 26.0.1
@@ -1985,7 +1985,7 @@ packages:
       integrity: sha512-InuOIiKk8wwuOFg6x9BQXbzjrQhtyXh46K9bqVTPzSo2FnyMBaYGBMC6PhQy7yxxil9vIedFBweQBMK74/7o8A==
       registry: https://registry.npmjs.com/
       tarball: https://registry.npmjs.com/escodegen/-/escodegen-1.14.2.tgz
-  /eslint-config-prettier/7.0.0_eslint@7.2.0:
+  /eslint-config-prettier/8.0.0_eslint@7.2.0:
     dependencies:
       eslint: 7.2.0
     dev: true
@@ -1993,7 +1993,7 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
     resolution:
-      integrity: sha512-8Y8lGLVPPZdaNA7JXqnvETVC7IiVRgAP6afQu9gOQRn90YY3otMNh+x7Vr2vMePQntF+5erdSUBqSzCmU/AxaQ==
+      integrity: sha512-5EaAVPsIHu+grmm5WKjxUia4yHgRrbkd8I0ffqUSwixCPMVBrbS97UnzlEY/Q7OWo584vgixefM0kJnUfo/VjA==
   /eslint-import-resolver-node/0.3.4:
     dependencies:
       debug: 2.6.9
@@ -6323,7 +6323,7 @@ specifiers:
   '@typescript-eslint/parser': ^4.0.0
   axios: ^0.21.0
   eslint: ^7.2.0
-  eslint-config-prettier: ^7.0.0
+  eslint-config-prettier: ^8.0.0
   eslint-plugin-import: ^2.21.2
   husky: ^5.0.0
   jest: ^26.0.1
