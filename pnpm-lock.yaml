@@ -8,7 +8,7 @@ devDependencies:
   eslint: 7.2.0
   eslint-config-prettier: 8.0.0_eslint@7.2.0
   eslint-plugin-import: 2.21.2_eslint@7.2.0
-  husky: 5.0.9
+  husky: 6.0.0
   jest: 26.0.1
   lint-staged: 10.2.11
   prettier: 2.0.5
@@ -2796,13 +2796,11 @@ packages:
       integrity: sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==
       registry: https://registry.npmjs.com/
       tarball: https://registry.npmjs.com/human-signals/-/human-signals-1.1.1.tgz
-  /husky/5.0.9:
+  /husky/6.0.0:
     dev: true
-    engines:
-      node: '>= 10'
     hasBin: true
     resolution:
-      integrity: sha512-0SjcaY21a+IRdx7p7r/X33Vc09UR2m8SbP8yfkhUX2/jAmwcz+GR7i9jXkp2pP3GfX23JhMkVP6SWwXB18uXtg==
+      integrity: sha512-SQS2gDTB7tBN486QSoKPKQItZw97BMOd+Kdb6ghfpBc0yXyzrddI0oDV5MkDAbuB4X2mO3/nj60TRMcYxwzZeQ==
   /iconv-lite/0.4.24:
     dependencies:
       safer-buffer: 2.1.2
@@ -6325,7 +6323,7 @@ specifiers:
   eslint: ^7.2.0
   eslint-config-prettier: ^8.0.0
   eslint-plugin-import: ^2.21.2
-  husky: ^5.0.0
+  husky: ^6.0.0
   jest: ^26.0.1
   lint-staged: ^10.2.11
   prettier: ^2.0.5
