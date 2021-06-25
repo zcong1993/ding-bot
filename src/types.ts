@@ -76,10 +76,10 @@ export interface ActionCardMsg extends BaseMsgWithoutAt {
 }
 
 export interface FeedCard {
-  links: Link[]
+  links: FeedCardLink[]
 }
 
-export interface Link {
+export interface FeedCardLink {
   title: string
   messageURL: string
   picURL: string
