@@ -5,7 +5,7 @@ specifiers:
   '@types/node': ^14.0.13
   '@typescript-eslint/eslint-plugin': ^5.0.0
   '@typescript-eslint/parser': ^5.0.0
-  axios: ^0.22.0
+  axios: ^0.23.0
   eslint: ^8.0.0
   eslint-config-prettier: ^8.0.0
   eslint-plugin-import: ^2.21.2
@@ -17,7 +17,7 @@ specifiers:
   typescript: ^4.0.0
 
 dependencies:
-  axios: 0.22.0
+  axios: 0.23.0
 
 devDependencies:
   '@types/jest': 27.0.0
@@ -1016,8 +1016,8 @@ packages:
     resolution: {integrity: sha1-x57Zf380y48robyXkLzDZkdLS3k=}
     dev: true
 
-  /axios/0.22.0:
-    resolution: {integrity: sha512-Z0U3uhqQeg1oNcihswf4ZD57O3NrR1+ZXhxaROaWpDmsDTx7T2HNBV2ulBtie2hwJptu8UvgnJoK+BIqdzh/1w==}
+  /axios/0.23.0:
+    resolution: {integrity: sha512-NmvAE4i0YAv5cKq8zlDoPd1VLKAqX5oLuZKs8xkJa4qi6RGn0uhCYFjWtHHC9EM/MwOwYWOs53W+V0aqEXq1sg==}
     dependencies:
       follow-redirects: 1.14.4
     transitivePeerDependencies:
