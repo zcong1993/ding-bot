@@ -15,7 +15,8 @@
     "format": "prettier --write '**/*.{ts,json,md}'",
     "jest": "jest --detectOpenHandles --forceExit",
     "jest:cov": "jest --coverage --detectOpenHandles --forceExit",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "release": "js-release"
   },
   "types": "./dist/index.d.ts",
   "author": "zcong1993",
@@ -25,6 +26,7 @@
     "@types/node": "^16.0.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
+    "@zcong/js-release": "^0.2.5",
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-import": "^2.21.2",
