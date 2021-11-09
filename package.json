@@ -1,67 +1,51 @@
 {
   "name": "@zcong/ding-bot",
   "version": "0.1.2",
-  "description": "my cool project",
+  "description": "node sdk for DingTalk Bot",
   "main": "./dist/index.js",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "scripts": {
     "build": "tsc",
     "test": "npm run lint && npm run jest",
     "test:cov": "npm run lint && npm run jest:cov",
-    "lint": "eslint 'src/**/*.ts'",
-    "format": "prettier --write '**/*.{ts,json,md}'",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
     "jest": "jest --detectOpenHandles --forceExit",
     "jest:cov": "jest --coverage --detectOpenHandles --forceExit",
     "prepublishOnly": "npm run build",
-    "release": "js-release"
+    "release": "js-release",
+    "prepare": "husky install"
   },
   "types": "./dist/index.d.ts",
   "author": "zcong1993",
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^27.0.0",
-    "@types/node": "^16.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.7",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
     "@zcong/js-release": "^0.2.5",
-    "eslint": "^8.0.0",
-    "eslint-config-prettier": "^8.0.0",
-    "eslint-plugin-import": "^2.21.2",
-    "husky": "^7.0.0",
-    "jest": "^27.0.0",
-    "lint-staged": "^11.0.0",
-    "prettier": "^2.0.5",
-    "ts-jest": "^27.0.0",
-    "typescript": "^4.0.0"
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.2.4",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "lint-staged": "^11.2.6",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.4.4"
   },
   "jest": {
-    "testEnvironment": "node",
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
+    "preset": "ts-jest",
+    "collectCoverageFrom": [
+      "src/**/*.ts"
     ]
   },
   "lint-staged": {
-    "*.{js,json,ts}": [
-      "yarn format",
-      "git add ."
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint && lint-staged"
-    }
+    "**/*": "prettier --ignore-unknown --write"
   },
   "dependencies": {
     "isomorphic-unfetch": "^3.1.0"
