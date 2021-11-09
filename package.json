@@ -62,6 +62,6 @@
     }
   },
   "dependencies": {
-    "axios": "^0.24.0"
+    "isomorphic-unfetch": "^3.1.0"
   }
 }

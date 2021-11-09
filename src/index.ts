@@ -1,4 +1,4 @@
-import axios from 'axios'
+import fetch from 'isomorphic-unfetch'
 import { createSign } from './sign'
 import {
   Options,
@@ -64,17 +64,21 @@ export class DingBot {
     }
   }
 
-  async rawSend(msg: Msg | string) {
-    const { data } = await axios.request<Resp>({
-      method: 'post',
-      url: this.buildUrl(),
-      data: msg,
+  async rawSend(msg: Msg | string): Promise<Resp> {
+    // hack, json not support multi line string by default,
+    // but dingding server allowed it,
+    // so we should treat user's input as raw json string event it is invalid.
+    const body = typeof msg === 'string' ? msg : JSON.stringify(msg)
+
+    const r = await fetch(this.buildUrl(), {
+      method: 'POST',
+      body,
       headers: {
         'content-type': 'application/json',
       },
     })
 
-    return data
+    return r.json()
   }
 
   private buildUrl() {
